@@ -1,4 +1,7 @@
 {
+  "name": "portfolio-tracker",
+  "description": "A portfolio tracker app for crypto.",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
