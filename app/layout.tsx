@@ -1,7 +1,7 @@
 import '@/styles/dist.css';
 import React from 'react';
 import AddressBar from '@/ui/AddressBar';
-import GlobalNav from './GlobalNav';
+import { Sidebar } from '@/ui/Sidebar';
 
 export default function RootLayout({
   children,
@@ -9,14 +9,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html className="dark">
       <head>
-        <title>Next.js Turbopack App Directory Playground</title>
+        <title>Portfolio Tracker</title>
       </head>
-      <body className="overflow-y-scroll bg-zinc-900">
+      <body className="overflow-y-scroll bg-zinc-900 text-white">
         <div className="grid grid-cols-[1fr,minmax(auto,240px),min(800px,100%),1fr] gap-x-8 py-8">
           <div className="col-start-2">
-            <GlobalNav />
+            <Sidebar />
           </div>
 
           <div className="col-start-3 space-y-6">
