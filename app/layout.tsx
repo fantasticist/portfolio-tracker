@@ -29,26 +29,11 @@ export default function RootLayout({
 
           <div className="col-start-3 col-end-4 mt-28 flex items-center justify-center">
             <div className="text-sm text-zinc-600">
-              Created by the <b>Next.js</b>
-              {' team at '}
-              <a href="https://vercel.com">
-                <b>Vercel</b>
+              Data Data provided by{' '}
+              <a href="https://coingecko.com">
+                <b>CoinGecko</b>
               </a>
               {'. '}
-              <a
-                className="underline decoration-dotted underline-offset-4"
-                href="https://github.com/vercel/next.js/examples/with-turbopack"
-              >
-                View the code
-              </a>
-              {' or '}
-              <a
-                className="underline decoration-dotted underline-offset-4"
-                href="https://vercel.com/templates/next.js"
-              >
-                deploy your own
-              </a>
-              {'.'}
             </div>
           </div>
         </div>

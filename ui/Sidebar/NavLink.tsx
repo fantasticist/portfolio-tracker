@@ -32,7 +32,7 @@ export function NavLink({ name, slug, icon: Icon }: NavLinkProps) {
         className="w-6 h-6 mr-3 text-zinc-500 transition duration-75 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white"
         aria-hidden="true"
       />
-      <span className="hidden lg:block">{name}</span>
+      <span>{name}</span>
     </Link>
   );
 }
