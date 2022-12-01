@@ -1,3 +1,5 @@
+import { ENDPOINT } from './common';
+
 export type GetCoinParams = {
   id: string;
   localization?: boolean | string; // TODO
@@ -8,9 +10,7 @@ export type GetCoinParams = {
   sparkline?: boolean;
 };
 
-const ENDPOINT = 'https://api.coingecko.com/api/v3';
-
-export async function getCoin(params: GetCoinParams) {
+export async function fetchCoin(params: GetCoinParams) {
   params = Object.assign(
     {
       localization: false,

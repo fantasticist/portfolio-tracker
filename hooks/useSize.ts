@@ -10,7 +10,6 @@ export function useSize(target: RefObject<any>) {
 
   // Where the magic happens
   useResizeObserver(target, (entry) => {
-    console.log(entry.contentRect);
     // @ts-ignore
     setSize(entry.contentRect);
   });

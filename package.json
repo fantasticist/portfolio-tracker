@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "@react-hook/resize-observer": "1.2.6",
-    "@tanstack/react-query": "4.18.0",
     "@visx/curve": "2.1.0",
     "@visx/group": "2.10.0",
     "@visx/scale": "2.2.2",

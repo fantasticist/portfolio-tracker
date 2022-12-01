@@ -1,5 +1,6 @@
 'use client';
-import { CoinCard } from '@/ui/Dashboard/CoinCard';
+
+import { CoinCard } from '@/ui/CoinCard';
 
 export default function Dashboard() {
   return (

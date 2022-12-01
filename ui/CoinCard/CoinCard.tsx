@@ -1,28 +1,15 @@
 'use client';
 
-import { useSize } from '@/hooks/useSize';
-import { getCoin } from '@/services/coinGecko';
-import { Suspense, use, useMemo, useRef } from 'react';
-import { Curve } from './Curve';
-import { Price } from './Price';
+import { Suspense } from 'react';
+import { CurrentPrice } from './CurrentPrice';
+import { PriceChangeCurve } from './PriceChangeCurve';
+import { PriceChangePercentage } from './PriceChangePercentage';
 
-export type CoinCard = {
+export type CoinCardProps = {
   coin: string;
 };
 
-export function CoinCard({ coin }: CoinCard) {
-  return (
-    <Suspense fallback={'Loading'}>
-      <CoinCardInner coin={coin} />
-    </Suspense>
-  );
-}
-
-export function CoinCardInner({ coin }: CoinCard) {
-  const ref = useRef(null);
-  const size: any = useSize(ref);
-  const data = use(getCoin({ id: coin }));
-
+export function CoinCard({ coin }: CoinCardProps) {
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center">
@@ -43,13 +30,17 @@ export function CoinCardInner({ coin }: CoinCard) {
 
           <span>USD</span>
         </div>
-        <div className="font-medium text-green-600">+10.01%</div>
+        <Suspense fallback={'Loading'}>
+          <PriceChangePercentage coin={coin} />
+        </Suspense>
       </div>
-      <div className="">
-        <Price coin={coin} data={data} />
-      </div>
-      <div ref={ref}>
-        <Curve coin={coin} width={size?.width ?? 0} height={80} data={data} />
+      <Suspense fallback={'Loading'}>
+        <CurrentPrice coin={coin} />
+      </Suspense>
+      <div>
+        <Suspense fallback={'Loading curve'}>
+          <PriceChangeCurve coin={coin} />
+        </Suspense>
       </div>
     </div>
   );
