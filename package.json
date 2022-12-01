@@ -22,6 +22,7 @@
   "dependencies": {
     "@react-hook/resize-observer": "1.2.6",
     "@visx/curve": "2.1.0",
+    "@visx/gradient": "2.10.0",
     "@visx/group": "2.10.0",
     "@visx/scale": "2.2.2",
     "@visx/shape": "2.12.2",
@@ -29,6 +30,7 @@
     "concurrently": "7.5.0",
     "d3-array": "3.2.0",
     "next": "latest",
+    "numeral": "2.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-components": "6.0.0-beta.2",
@@ -38,6 +40,7 @@
   "devDependencies": {
     "@types/d3-array": "3.0.3",
     "@types/node": "18.0.3",
+    "@types/numeral": "2.0.2",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
     "@visx/mock-data": "2.15.1",

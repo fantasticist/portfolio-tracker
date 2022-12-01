@@ -7,14 +7,15 @@ import { PriceChangePercentage } from './PriceChangePercentage';
 
 export type CoinCardProps = {
   coin: string;
+  symbol: string;
 };
 
-export function CoinCard({ coin }: CoinCardProps) {
+export function CoinCard({ coin, symbol }: CoinCardProps) {
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center">
         <div className="flex font-semibold space-x-2 items-center">
-          <span>ETH</span>
+          <span>{symbol}</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
